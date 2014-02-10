@@ -23,8 +23,12 @@ public class QuickUnionUF {
 	 * Could be slow if long skinny tree.
 	 * */
 	private int root(int a){
-		while (a != list[a])
+		while (a != list[a]){
+			//making the tree flat, path compression.
+			list[a] = list[list[a]];
+			
 			a = list[a];
+		}
 		return a;
 	}
 	
