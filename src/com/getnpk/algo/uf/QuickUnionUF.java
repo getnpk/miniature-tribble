@@ -1,4 +1,4 @@
-package com.getnpk.algo;
+package com.getnpk.algo.uf;
 
 public class QuickUnionUF {
 

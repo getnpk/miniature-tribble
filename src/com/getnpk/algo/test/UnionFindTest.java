@@ -1,6 +1,6 @@
 package com.getnpk.algo.test;
 
-import com.getnpk.algo.QuickFindUF;
+import com.getnpk.algo.uf.QuickFindUF;
 
 public class UnionFindTest {
 
