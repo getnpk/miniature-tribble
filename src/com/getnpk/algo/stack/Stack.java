@@ -1,6 +1,8 @@
 package com.getnpk.algo.stack;
 
-public class Stack {
+import java.util.Iterator;
+
+public class Stack implements Iterable<String>{
 
 	private Node top;
 
@@ -41,5 +43,33 @@ public class Stack {
 			temp = temp.getNext();
 			System.out.print(temp.getItem() + " ");
 		}
+	}
+
+	@Override
+	public Iterator<String> iterator() {
+		return new StackIterator();
+	}
+	
+	private class StackIterator implements Iterator<String>{
+
+		private Node current = top;
+		
+		@Override
+		public boolean hasNext() {
+			return current.getNext() != null;
+		}
+
+		@Override
+		public String next() {
+			String item = current.getItem();
+			current = current.getNext();
+			return item;
+		}
+
+		@Override
+		public void remove() {
+			throw new UnsupportedOperationException();
+		}
+		
 	}
 }
