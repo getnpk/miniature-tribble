@@ -2,6 +2,7 @@ package com.getnpk.algo.stack;
 
 import java.util.Iterator;
 
+
 public class Stack implements Iterable<String>{
 
 	private Node top;
